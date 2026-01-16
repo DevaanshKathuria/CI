@@ -1,0 +1,32 @@
+# Name
+# Trigger / Event
+# Jobs
+  # Steps
+
+
+name: React CI
+
+
+on: push
+
+jobs: 
+  run-test:
+    runs-on: ubuntu-latest
+    
+
+
+    steps: 
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+
+      - name: Use Node.js
+        uses: action/setup-node@v4
+
+        with:
+          node-version: 18
+
+      - name: Run test
+        run: npm run test
